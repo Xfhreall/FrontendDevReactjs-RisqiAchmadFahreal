@@ -16,7 +16,7 @@ export function RestaurantGrid() {
 
   if (isLoading) {
     return (
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10 py-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10 py-8">
         {[...Array(8)].map((_, i) => (
           <div key={`skeleton-${i.toString()}`} className="flex flex-col h-full space-y-4">
             <Skeleton className="aspect-[4/3] w-full rounded-lg" />
@@ -47,7 +47,7 @@ export function RestaurantGrid() {
       <h2 className="text-2xl font-light tracking-wide text-foreground">
         All Restaurants
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
         {restaurants.map((restaurant) => (
           <RestaurantCard key={restaurant.id} restaurant={restaurant} />
         ))}
